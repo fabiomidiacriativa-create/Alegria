@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="theme-color" content="#0B1220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="robots" content="noindex,nofollow">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<title>Alegria · Painel dos Admins</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="login" class="login hidden">
+  <div class="login-card">
+    <div class="logo">🚴</div>
+    <h1>Alegria</h1>
+    <p>Área restrita dos administradores</p>
+    <form id="loginForm" autocomplete="off">
+      <input id="loginName" type="text" placeholder="Digite seu nome" autocapitalize="words" required>
+      <button class="btn primary big" type="submit">Entrar</button>
+    </form>
+    <div id="loginErr" class="login-err"></div>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <header class="topbar">
+    <div class="brand"><span class="brand-dot">🚴</span><div><b id="viewTitle">Início</b><small id="viewSub"></small></div></div>
+    <button class="avatar" id="avatarBtn" aria-label="Perfil"></button>
+  </header>
+  <main id="view"></main>
+  <nav class="tabbar" id="tabbar"></nav>
+</div>
+
+<div id="sheetWrap" class="sheet-wrap" aria-hidden="true"><div class="sheet" id="sheet"></div></div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
